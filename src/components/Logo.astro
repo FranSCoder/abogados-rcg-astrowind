@@ -1,9 +1,15 @@
 ---
+import { Image } from 'astro:assets';
 import { SITE } from 'astrowind:config';
+import companyLogo from '../assets/favicons/AbogadosRCG-Logo.png';
+
+const companyLogoAlt = 'Logo of RCG Abogados';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
-</span>
+<div class="flex justify-center align-middle">
+  <Image src={companyLogo} alt={companyLogoAlt} height={50} width={50} />
+  <span
+    class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+    >{SITE?.name}</span
+  >
+</div>
